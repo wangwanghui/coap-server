@@ -33,9 +33,9 @@ public class ObserveCoapClient {
         config.set(UdpConfig.UDP_DATAGRAM_SIZE, 128 * 1024);            // 64KB！直接设置最大值
 
         // 超时配置
-        config.set(CoapConfig.ACK_TIMEOUT, 30, TimeUnit.SECONDS);      // 30秒
-        config.set(CoapConfig.MAX_RETRANSMIT, 4);
-        config.set(CoapConfig.EXCHANGE_LIFETIME, 300, TimeUnit.SECONDS); // 5分钟
+        config.set(CoapConfig.ACK_TIMEOUT, 1, TimeUnit.SECONDS);      // 30秒
+        config.set(CoapConfig.MAX_RETRANSMIT, 1);
+        config.set(CoapConfig.EXCHANGE_LIFETIME, 2, TimeUnit.SECONDS); // 5分钟
         //config.set(CoapConfig.DEFAULT_BLOCKWISE_ENTITY_TOO_LARGE_AUTO_FAILOVER,false);
     }
     private static final Logger logger = LoggerFactory.getLogger(ObserveCoapClient.class);
